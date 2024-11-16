@@ -11,8 +11,17 @@
 
 .page__section{
     max-width: 1280px;
-    margin: 0 80px;
+    padding-right: 16px;
+    padding-left: 16px;
 
+}
+
+.page__section-divider{
+    border-bottom: 1px solid #212121;
+    opacity: 40%;
+    margin-top: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
 }
 
 .header{
@@ -23,10 +32,10 @@
 
 .profile{
     height: 210px;
-    margin-top: 34px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-top: 14px !important;
 }
 
 .profile__info{
@@ -49,6 +58,7 @@
 
 .profile__title{
     margin: 0;
+    font-family: 'Poppins-Medium';
     font-weight: 500;
     font-size: 32px;
     line-height: 32px;
@@ -56,7 +66,8 @@
 }
 
 .profile__subtitle{
-    margin: 0;
+    margin: 12px 0 0;
+    font-family: 'Poppins-Medium';
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
@@ -65,34 +76,60 @@
 }
 
 .profile__edit-button{
-    width: 107px;
+    padding: 0;
+    width: 120px;
     border: none;
     cursor: pointer;
+    opacity: 70%;
     background: transparent url("../images/edit_button.svg") left no-repeat;
+    transition: opacity 0.3s linear;
 }
 
 .edit-button-text{
-    margin:0;
+    margin: 0;
+    font-family: 'Poppins-Medium';
     font-weight: 500;
     font-size: 16px;
+    line-height: 16px;
     color: #212121;
-    opacity: 70%;
     margin-left: 8px;
 }
 
 .profile__add-button{
+    padding: 0;
+    min-width: 149px;
     width: 149px;
     height: 52px;
     border: none;
-    border-radius: 5%;
+    border-radius: 8px;
     cursor: pointer;
-    background: #212121 url("../images/add_button.svg") left no-repeat;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s linear;
+}
+
+.add-button-icon{
+    width: 15px;
+    height: 15px;
+    background: transparent url("../images/add_button.svg") left no-repeat;
+    margin-right: 8px;
 }
 
 .add-button-text{
-    margin: 0 auto;
+    margin: 0;
     font-weight: 500;
     font-size: 16px;
     color: white;
     display: inline;
 }
+
+.profile__edit-button:hover{
+    opacity: 100%;
+}
+
+.profile__add-button:hover{
+    opacity: 80%;
+}
+
