@@ -1,0 +1,15 @@
+
+.footer{
+    border-top: 1px solid rgba(33, 33, 33, 0.4);
+    margin-top: 40px;
+    
+}
+
+.footer__copyright{
+    margin: 60px auto 60px;
+    text-align: center;
+    opacity: 70%;
+    font-weight: 400px;
+    font-size: 16px;
+    line-height: 16px;
+} 
