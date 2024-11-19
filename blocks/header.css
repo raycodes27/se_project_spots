@@ -1,4 +1,13 @@
 .header{
-    background: white url("../images/spots_logo.svg") center no-repeat;
+    background-color: #fff;
     height: 46px;
+    display: flex;
+    justify-content: center;
+    min-width: 505px;
+}
+
+.header__logo{
+    padding: 10px 0 10px 0;
+    width: 94px;
+    height: 24px;
 }

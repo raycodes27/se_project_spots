@@ -1,104 +1,68 @@
+
 .profile{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-top: 14px !important;
-    border-bottom: 1px solid rgba(33, 33, 33, 0.4);
+    padding-top: 34px;
     padding-bottom: 20px;
-    
-} 
+    border-bottom: 1px rgba(33,33,33,0.4) solid;
+}
 
-.profile__info{
-    width: 505px;
-    height: 190px;
+.profile__avatar{
+    margin-right: 20px;
+}
+
+.profile__name{
+    font-family: 'Poppins-Medium', Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.profile__description{
+    font-family: 'Poppins-Medium', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 12px;
+
+}
+
+.profile__column{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    column-gap: 20px;
-}
-
-.profile__image{
-    width: 190px;
-    height: 190px;
-    border-radius: 8px;
-
-}
-
-.profile__title{
-    margin: 0;
-    font-family: 'Poppins-Medium';
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 32px;
-    color: #212121;
-}
-
-.profile__subtitle{
-    margin: 12px 0 0;
-    font-family: 'Poppins-Medium';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    color: #212121;
-    opacity: 70%;
+    
 }
 
 .profile__edit-button{
     padding: 0;
-    width: 120px;
+    margin-top: auto;
     border: none;
-    cursor: pointer;
-    opacity: 70%;
-    background: transparent url("../images/edit_button.svg") left no-repeat;
-    transition: opacity 0.3s linear;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
 }
 
-.edit-button-text{
-    margin: 0;
-    font-family: 'Poppins-Medium';
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    color: #212121;
-    margin-left: 8px;
+.profile__edit-icon{
+    padding-right: 8px;
 }
 
 .profile__add-button{
+    margin-left: auto;
     padding: 0;
-    min-width: 149px;
-    width: 149px;
-    height: 52px;
+    background-color: rgba(33, 33, 33, 1);
     border: none;
     border-radius: 8px;
-    cursor: pointer;
-    background-color: #212121;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s linear;
+    color: #fff;
+    width: 149px;
+    min-width: 149px;
+    height: 52px;
+    align-self: flex-end;
+    
+
 }
 
-.add-button-icon{
-    width: 15px;
-    height: 15px;
-    background: transparent url("../images/add_button.svg") left no-repeat;
-    margin-right: 8px;
-}
-
-.add-button-text{
-    margin: 0;
-    font-weight: 500;
-    font-size: 16px;
-    color: white;
-    display: inline;
-}
-
-.profile__edit-button:hover{
-    opacity: 100%;
-}
-
-.profile__add-button:hover{
-    opacity: 80%;
+.profile__add-icon{
+    padding-right: 8px;     
 }
