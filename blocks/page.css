@@ -1,5 +1,8 @@
 .page{
+    max-width: 100%;
+    overflow-x: hidden;
     min-height: 100vh;
+    min-width: 320px;
     background-color: #fcf5e5;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
