@@ -29,3 +29,7 @@ This website portraits a gallery of images where the user can upload photos and 
 This website is deployed on Github pages
 
 [Deployment site](https://raycodes27.github.io/se_project_spots/)
+
+## Video about the project
+
+[Project video](https://drive.google.com/file/d/1ka9BYvrJ52tOiI1iwmYB_mRC7ZxtUfz4/view?usp=sharing)
