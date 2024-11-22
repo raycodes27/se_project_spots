@@ -1,13 +1,13 @@
-.page{
-    max-width: 100%;
-    overflow-x: hidden;
-    min-height: 100vh;
-    min-width: 320px;
-    background-color: #fcf5e5;
-    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+.page {
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  min-width: 320px;
+  background-color: #fcf5e5;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-.page__section{
-    margin: 0 auto;
-    max-width: 1280px;
+.page__section {
+  margin: 0 auto;
+  max-width: 1280px;
 }

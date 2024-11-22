@@ -1,3 +1,4 @@
-.content{
-    padding: 0 16px;
+.content {
+  padding: 0 16px;
+  min-height: calc(100vh - 122.52px);
 }
