@@ -15,14 +15,14 @@ This website portraits a gallery of images where the user can upload photos and 
 ## Website views
 
 ### Website view on Desktop view
-![Example of Spots website on Desktop view]("images/README.md images/image.png")
+![Example of Spots website on Desktop view](<images/README.md images/image.png>)
 
 
 ### Website view on Tablet view
-![Example of Spots website on Tablet mode]("images/README.md images/image.png")
+![Example of Spots website on Tablet mode](<images/README.md images/image.png>)
 
 ### Website view on Mobile view
-![Example of Spots website on Mobile mode]("images/README.md images/image-2.png")
+![Example of Spots website on Mobile mode](<images/README.md images/image-2.png>)
 
 ## Deployment
 
