@@ -37,7 +37,7 @@
   opacity: 100%;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 665px) {
   .card__title {
     font-size: 16px;
     line-height: 16px;
