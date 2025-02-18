@@ -37,6 +37,11 @@
   opacity: 100%;
 }
 
+.card__like-btn-clicked {
+  background-color: #ff6565 !important;
+
+}
+
 @media screen and (max-width: 665px) {
   .card__title {
     font-size: 16px;

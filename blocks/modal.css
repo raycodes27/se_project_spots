@@ -14,7 +14,7 @@
   visibility: hidden;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -26,18 +26,6 @@
   max-width: 730px;
   box-sizing: border-box;
   border-radius: 8px;
-}
-
-.modal__close-btn {
-  position: absolute;
-  top: 36.49px;
-  right: 53.51px;
-  opacity: 40%;
-  background: transparent url(../images/close_icon.svg) no-repeat;
-  width: 40px;
-  height: 40px;
-  border: none;
-  cursor: pointer;
 }
 
 .modal__title {
@@ -68,12 +56,17 @@
   border: 1px solid rgba(21, 21, 21, 0.4);
   border-radius: 8px;
   border-style: solid;
+  transition: border-color 0.5s linear;
+}
+
+.modal__input:hover{
+  border-color: rgba(21, 21, 21, 1);
+  
 }
 
 .modal__input:focus {
   outline: none;
   cursor: text;
-  border: 1px solid rgba(21, 21, 21, 1);
 }
 
 .modal__input::placeholder {
@@ -93,6 +86,28 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.5s linear;
+}
+
+.modal__submit-btn:hover {
+  background-color: rgba(21, 21, 21, 0.8);
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 36.49px;
+  right: 53.51px;
+  opacity: 40%;
+  background: transparent url(../images/close_icon.svg) no-repeat;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+
+.modal__close-btn:hover {
+  opacity: 100%;
 }
 
 @media screen and (max-width: 665px) {
