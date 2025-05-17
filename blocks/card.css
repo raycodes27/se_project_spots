@@ -1,0 +1,19 @@
+.card{
+  max-width: 413px;
+}
+
+.card__image{
+  height: 413px;
+  width: 413px;
+  object-fit: cover;
+  display: block;
+}
+
+.card__like-btn{
+  background-image: url(../images/like_icon.svg);
+  background-color: transparent;
+  width: 24px;
+  height: 20px;
+  opacity: 40%;
+  border: none;
+}
