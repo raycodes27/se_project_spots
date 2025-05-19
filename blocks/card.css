@@ -7,6 +7,13 @@
   width: 413px;
   object-fit: cover;
   display: block;
+  border-radius: 8px;
+}
+
+.card__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .card__like-btn{
@@ -16,4 +23,5 @@
   height: 20px;
   opacity: 40%;
   border: none;
+  cursor: pointer;
 }
