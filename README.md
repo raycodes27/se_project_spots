@@ -1,4 +1,5 @@
-**# Spots
+
+# Spots
 
 An image sharing site.
 
@@ -8,10 +9,9 @@ This is a website application where people can update their profile and upload p
   
 ## Technologies used
 
--HTML
--CSS
--Grid system
--Responsive Design
+- HTML
+- CSS
+- Responsive design
 
 ## Images
 
@@ -21,5 +21,5 @@ This is a website application where people can update their profile and upload p
 
 
 ## Deployment Link
-
+[Spots](https://raycodes27.github.io/se_project_spots/)
 
