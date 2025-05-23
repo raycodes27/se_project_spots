@@ -5,8 +5,11 @@
 }
 
 .profile__avatar {
+  width: 190px;
+  height: 190px;
   margin-right: 20px;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .profile__column {
@@ -14,7 +17,6 @@
   display: flex;
   flex-direction: column;
   line-height: 1;
-
 }
 
 .profile__name {
@@ -33,6 +35,7 @@
   margin: 0;
   opacity: 70%;
   font-size: 16px;
+  font-weight: 500;
   max-width: 420px;
   display: -webkit-box;
   overflow: hidden;
@@ -41,16 +44,15 @@
   -webkit-box-orient: vertical;
 }
 
-.profile__edit-btn-icon {
-  margin-right: 8px;
-}
-
 .profile__edit-btn {
   color: #212121;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  line-height: 0.8;
   opacity: 0.7;
   margin-top: auto;
   padding: 0;
-  align-self: start;
   background-color: transparent;
   font-size: 16px;
   border: none;
@@ -58,7 +60,11 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.profile__edit-btn:hover{
+.profile__edit-btn-icon {
+  margin-right: 8px;
+}
+
+.profile__edit-btn:hover {
   opacity: 1;
 }
 
@@ -78,7 +84,7 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-.profile__new-post-btn:hover{
+.profile__new-post-btn:hover {
   opacity: 0.8;
 }
 
@@ -107,12 +113,10 @@
   .profile__name {
     font-size: 20px;
     margin: 0 0 6px;
-    font-weight: 500;
   }
 
   .profile__description {
     margin: 0 0 32px;
-
   }
 
   .profile__edit-btn {
