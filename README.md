@@ -21,3 +21,7 @@ This is a website application where people can update their profile and upload p
 ## Deployment Link
 
 [Spots](https://raycodes27.github.io/se_project_spots/)
+
+## Video about the project
+
+[Video Link](https://drive.google.com/file/d/1FiSjY2NoMiNXMMtTzlCT-buJ6r64B5wM/view?usp=sharing)
