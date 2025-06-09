@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,10 +10,8 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <title>Spots</title>
 </head>
-
 <body>
   <div class="page">
-
     <header class="header">
       <img src="./images/spots.svg" alt="Spots logo image" class="header__logo">
     </header>
@@ -85,6 +82,24 @@
     <footer class="footer page__section">
       <p class="footer__copyright">2025 © Spots</p>
     </footer>
+  </div>
+  <div class="modal modal_is-opened">
+    <div class="modal__container">
+      <button class="modal__close-btn" type="button"></button>
+      <h2 class="modal__title">Edit profile</h2>
+      <form action="" class="modal__form">
+
+        <label for="profile-name-input">Name
+          <input id="profile-name-input" type="text" class="modal__profile-name" placeholder="Bessie Coleman"/>
+        </label>
+
+        <label for="profile-description-input">Description
+          <input id="profile-description-input" type="text" class="modal__profile-description" placeholder="Civil Aviator"/>
+        </label>
+
+      </form>
+      <button class="modal__profile_submit-btn" type="submit">Save</button>
+    </div>
   </div>
 </body>
 
