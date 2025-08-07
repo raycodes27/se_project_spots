@@ -82,7 +82,7 @@
     <footer class="footer page__section">
       <p class="footer__copyright">2025 © Spots</p>
     </footer>
-    <div class="modal modal_is-opened">
+    <div class="modal" id="edit-profile-modal">
       <div class="modal__container">
         <button class="modal__close-btn" type="button"></button>
         <h2 class="modal__title">Edit Profile</h2>
@@ -94,11 +94,11 @@
             <input id="profile-description-input" type="text" class="modal__input" placeholder="Describe yourself">
           </label>
         </form>
-        <button class="modal__profile_submit-btn" type="submit">Save</button>
+        <button class="modal__submit-btn" type="submit">Save</button>
       </div>
     </div>
 
-    <!-- <div class="modal modal_is-opened">
+    <div class="modal" id="new-post-modal">
       <div class="modal__container">
         <button class="modal__close-btn" type="button"></button>
         <h2 class="modal__title">New post</h2>
@@ -110,10 +110,11 @@
             <input id="profile-description-input" type="text" class="modal__input" placeholder="Type your">
           </label>
         </form>
-        <button class="modal__profile_submit-btn" type="submit">Save</button>
+        <button class="modal__submit-btn" type="submit">Save</button>
       </div>
-    </div> -->
+    </div>
 
   </div>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
