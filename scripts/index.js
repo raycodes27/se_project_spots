@@ -1,3 +1,30 @@
+const initialCards = [
+  {
+    name: "Val Thorens",
+    link: "https://images.unsplash.com/photo-1565050270436-3acfa41c1ba0?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Restaurant terrace",
+    link: "https://images.unsplash.com/photo-1753086420778-205464e685c1?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "An outdoor coffee",
+    link: "https://images.unsplash.com/photo-1570028189911-cc378c486893?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "A very long bridge, over the forest",
+    link: "https://images.unsplash.com/photo-1535483321429-2d8dd5734ccc?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Tunnel with morning light",
+    link: "https://images.unsplash.com/photo-1673146690261-780ada4a8b30?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Mountain house",
+    link: "https://images.unsplash.com/photo-1613525041465-88225ec0122a?q=80&w=2412&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
 
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileBtn = document.querySelector(".profile__edit-btn");
@@ -62,3 +89,7 @@ function handleAddCardSubmit(e){
 
   newPostModal.classList.remove("modal_is-opened");
 }
+
+initialCards.forEach(function(element){
+  console.log(element.name);
+});
