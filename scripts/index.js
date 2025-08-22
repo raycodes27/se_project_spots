@@ -52,23 +52,31 @@ editProfileBtn.addEventListener("click", function(){
     nameInput.value = profileNameElement.textContent;
     jobInput.value = profileDescriptionElement.textContent;
 
-    editProfileModal.classList.add("modal_is-opened");
+    openModal(editProfileModal);
 });
 
 editProfileCloseBtn.addEventListener("click", function(){
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal)
 });
 
 newPostBtn.addEventListener("click", function () {
-  newPostModal.classList.add("modal_is-opened");
+  openModal(newPostModal);
 });
 
 newPostModalCloseBtn.addEventListener("click", function () {
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 });
 
 
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
 
 function handleProfileFormSubmit(e) {
   e.preventDefault();
@@ -76,7 +84,7 @@ function handleProfileFormSubmit(e) {
   profileNameElement.textContent = nameInput.value;
   profileDescriptionElement.textContent = jobInput.value;
 
-  editProfileModal.classList.remove("modal_is-opened");
+  closeModal(editProfileModal);
 };
 
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
@@ -84,10 +92,7 @@ addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 function handleAddCardSubmit(e){
   e.preventDefault();
 
-  console.log(linkInput.value);
-  console.log(captionInput.value);
-
-  newPostModal.classList.remove("modal_is-opened");
+  closeModal(newPostModal);
 }
 
 initialCards.forEach(function(element){
