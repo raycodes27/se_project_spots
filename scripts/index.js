@@ -33,6 +33,24 @@ const newPostModal = document.querySelector("#new-post-modal");
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModalCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
+const galleryModal = document.querySelector("#gallery-modal");
+const galleryModalCloseBtn = galleryModal.querySelector(
+  ".modal__gallery-close-btn"
+);
+const galleryModalImage = galleryModal.querySelector(".modal__gallery-img");
+const galleryModaltitle = galleryModal.querySelector(".modal__img-title");
+
+galleryModalCloseBtn.addEventListener("click", function () {
+  closeModal(galleryModal);
+});
+
+galleryModal.addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) {
+    closeModal(galleryModal);
+  }
+});
+
+
 const profileNameElement = document.querySelector(".profile__name");
 const profileDescriptionElement = document.querySelector(
   ".profile__description"
@@ -71,6 +89,15 @@ function getCardElement(data) {
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
   cardTitleElement.textContent = data.name;
+
+
+  cardImageElement.addEventListener("click", () =>{
+    galleryModal.classList.add("modal_is-opened");
+    galleryModalImage.src = data.link;
+    galleryModaltitle.alt = data.name;
+    galleryModaltitle.textContent = data.name;
+
+  });
 
   return cardElement;
 }
