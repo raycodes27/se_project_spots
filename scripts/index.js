@@ -5,7 +5,7 @@ const initialCards = [
   },
   {
     name: "Restaurant terrace",
-    link: "https://images.unsplash.com/photo-1753086420778-205464e685c1?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "https://images.unsplash.com/photo-1692866267930-a501e6c2e2cd?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "An outdoor coffee",
@@ -32,6 +32,23 @@ const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
 const newPostModal = document.querySelector("#new-post-modal");
 const newPostBtn = document.querySelector(".profile__new-post-btn");
 const newPostModalCloseBtn = newPostModal.querySelector(".modal__close-btn");
+
+const galleryModal = document.querySelector("#gallery-modal");
+const galleryModalCloseBtn = galleryModal.querySelector(
+  ".modal__gallery-close-btn"
+);
+const galleryModalImage = galleryModal.querySelector(".modal__gallery-img");
+const galleryModaltitle = galleryModal.querySelector(".modal__img-title");
+
+galleryModalCloseBtn.addEventListener("click", function () {
+  closeModal(galleryModal);
+});
+
+galleryModal.addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) {
+    closeModal(galleryModal);
+  }
+});
 
 const profileNameElement = document.querySelector(".profile__name");
 const profileDescriptionElement = document.querySelector(
@@ -71,6 +88,13 @@ function getCardElement(data) {
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
   cardTitleElement.textContent = data.name;
+
+  cardImageElement.addEventListener("click", () => {
+    openModal(galleryModal);
+    galleryModalImage.src = data.link;
+    galleryModaltitle.alt = data.name;
+    galleryModaltitle.textContent = data.name;
+  });
 
   return cardElement;
 }
