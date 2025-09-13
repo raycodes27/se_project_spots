@@ -75,10 +75,10 @@
         <h2 class="modal__title">New post</h2>
         <form class="modal__form">
           <label for="profile-link-input" class="modal__label">Image link
-            <input id="profile-link-input" type="text" class="modal__input" placeholder="Paste a link to the picture">
+            <input id="profile-link-input" type="text" class="modal__input" placeholder="Paste a link to the picture" required>
           </label>
           <label for="profile-caption-input" class="modal__label">Caption
-            <input id="profile-caption-input" type="text" class="modal__input" placeholder="Type your caption">
+            <input id="profile-caption-input" type="text" class="modal__input" placeholder="Type your caption" required>
           </label>
           <button class="modal__submit-btn" type="submit">Save</button>
         </form>
@@ -86,7 +86,7 @@
     </div>
     <div class="modal" id="gallery-modal">
       <div class="modal__gallery-container">
-        <button class="modal__gallery-close-btn" type="button"></button>
+        <button class="modal__close-btn modal__close-btn_type_image-preview" type="button"></button>
         <img class="modal__gallery-img" src="#" alt="">
         <h2 class="modal__img-title"></h2>
       </div>

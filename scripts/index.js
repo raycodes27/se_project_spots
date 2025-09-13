@@ -35,7 +35,7 @@ const newPostModalCloseBtn = newPostModal.querySelector(".modal__close-btn");
 
 const galleryModal = document.querySelector("#gallery-modal");
 const galleryModalCloseBtn = galleryModal.querySelector(
-  ".modal__gallery-close-btn"
+  ".modal__close-btn_type_image-preview"
 );
 const galleryModalImage = galleryModal.querySelector(".modal__gallery-img");
 const galleryModalTitle = galleryModal.querySelector(".modal__img-title");
