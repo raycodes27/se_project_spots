@@ -13,7 +13,7 @@
 }
 
 .modal__gallery-close-btn {
-  background: url(/images/gallery_close_Icon.svg);
+  background: url(../images/gallery_close_Icon.svg);
   background-size: 35px 35px;
   width: 40px;
   height: 40px;
@@ -27,13 +27,8 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-/* .modal__gallery-close-btn_preview{
-  top: 0;
-  right: -52.5px;
-} */
-
 .modal__gallery-close-btn:hover {
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .modal__img-title {
@@ -187,11 +182,10 @@
     width: 100%;
     max-width: none;
   }
-
 }
 
-@media screen and (max-width: 886px){
-  .modal__gallery-close-btn{
+@media screen and (max-width: 886px) {
+  .modal__gallery-close-btn {
     top: -38px;
     right: 0;
   }

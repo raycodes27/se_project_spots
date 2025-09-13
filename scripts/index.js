@@ -38,7 +38,7 @@ const galleryModalCloseBtn = galleryModal.querySelector(
   ".modal__gallery-close-btn"
 );
 const galleryModalImage = galleryModal.querySelector(".modal__gallery-img");
-const galleryModaltitle = galleryModal.querySelector(".modal__img-title");
+const galleryModalTitle = galleryModal.querySelector(".modal__img-title");
 
 galleryModalCloseBtn.addEventListener("click", function () {
   closeModal(galleryModal);
@@ -75,12 +75,11 @@ function getCardElement(data) {
   const cardDelBtn = cardElement.querySelector(".card__del-btn");
   cardDelBtn.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
-  const cardlikedBtn = cardElement.querySelector(".card__like-btn");
-  cardlikedBtn.addEventListener("click", () => {
-    cardlikedBtn.classList.toggle("card__like-btn_active");
+  const cardLikeBtn = cardElement.querySelector(".card__like-btn");
+  cardLikeBtn.addEventListener("click", () => {
+    cardLikeBtn.classList.toggle("card__like-btn_active");
   });
 
   const cardTitleElement = cardElement.querySelector(".card__title");
@@ -92,8 +91,8 @@ function getCardElement(data) {
   cardImageElement.addEventListener("click", () => {
     openModal(galleryModal);
     galleryModalImage.src = data.link;
-    galleryModaltitle.alt = data.name;
-    galleryModaltitle.textContent = data.name;
+    galleryModalImage.alt = data.name;
+    galleryModalTitle.textContent = data.name;
   });
 
   return cardElement;
@@ -151,6 +150,7 @@ function handleAddCardSubmit(e) {
   cardsList.prepend(cardElement);
 
   closeModal(newPostModal);
+  e.target.reset();
 }
 
 initialCards.forEach(function (item) {
