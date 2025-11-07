@@ -25,6 +25,7 @@ const initialCards = [
   },
 ];
 
+const documentModals = document.querySelectorAll(".modal");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -60,6 +61,7 @@ const nameInput = editProfileModal.querySelector("#profile-name-input");
 const jobInput = editProfileModal.querySelector("#profile-description-input");
 
 const addCardFormElement = newPostModal.querySelector(".modal__form");
+const cardSubmitBtn = newPostModal.querySelector(".modal__submit-btn");
 const captionInput = newPostModal.querySelector("#profile-caption-input");
 const linkInput = newPostModal.querySelector("#profile-link-input");
 
@@ -98,9 +100,18 @@ function getCardElement(data) {
   return cardElement;
 }
 
+documentModals.forEach((modal) => {
+  modal.addEventListener("click", (event) => {
+    if (event.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
+  });
+});
+
 editProfileBtn.addEventListener("click", function () {
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileDescriptionElement.textContent;
+  resetValidation(profileFormElement, [nameInput, jobInput]);
 
   openModal(editProfileModal);
 });
@@ -121,6 +132,15 @@ profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+
+  function modalCloseKey(e) {
+    if (e.key === "Escape" || e.key === "Esc") {
+      closeModal(modal);
+      document.removeEventListener("keydown", modalCloseKey);
+    }
+  }
+
+  document.addEventListener("keydown", modalCloseKey);
 }
 
 function closeModal(modal) {
@@ -148,9 +168,10 @@ function handleAddCardSubmit(e) {
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-
-  closeModal(newPostModal);
   e.target.reset();
+
+  disableButton(cardSubmitBtn, settings);
+  closeModal(newPostModal);
 }
 
 initialCards.forEach(function (item) {
