@@ -111,7 +111,7 @@ documentModals.forEach((modal) => {
 editProfileBtn.addEventListener("click", function () {
   nameInput.value = profileNameElement.textContent;
   jobInput.value = profileDescriptionElement.textContent;
-  resetValidation(profileFormElement, [nameInput, jobInput]);
+  resetValidation(profileFormElement, [nameInput, jobInput], settings);
 
   openModal(editProfileModal);
 });
@@ -149,10 +149,8 @@ function closeModal(modal) {
 
 function handleProfileFormSubmit(e) {
   e.preventDefault();
-
   profileNameElement.textContent = nameInput.value;
   profileDescriptionElement.textContent = jobInput.value;
-
   closeModal(editProfileModal);
 }
 
@@ -160,7 +158,6 @@ addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
 function handleAddCardSubmit(e) {
   e.preventDefault();
-
   const inputValues = {
     name: captionInput.value,
     link: linkInput.value,
