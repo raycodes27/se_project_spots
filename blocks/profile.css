@@ -23,7 +23,6 @@
   font-weight: 500;
   margin: 0 0 12px;
   font-size: 32px;
-  height: 36px;
   max-width: 420px;
   display: -webkit-box;
   overflow: hidden;
@@ -34,7 +33,7 @@
 
 .profile__description {
   margin: 0;
-  opacity: 70%;
+  opacity: 0.7;
   font-size: 16px;
   font-weight: 500;
   max-width: 420px;

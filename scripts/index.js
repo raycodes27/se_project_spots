@@ -45,12 +45,6 @@ galleryModalCloseBtn.addEventListener("click", function () {
   closeModal(galleryModal);
 });
 
-galleryModal.addEventListener("click", (e) => {
-  if (e.target === e.currentTarget) {
-    closeModal(galleryModal);
-  }
-});
-
 const profileNameElement = document.querySelector(".profile__name");
 const profileDescriptionElement = document.querySelector(
   ".profile__description"
@@ -132,15 +126,16 @@ profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", modalCloseKey);
 
   function modalCloseKey(e) {
     if (e.key === "Escape" || e.key === "Esc") {
       closeModal(modal);
       document.removeEventListener("keydown", modalCloseKey);
+    } else{
+      document.removeEventListener("keydown", modalCloseKey);
     }
   }
-
-  document.addEventListener("keydown", modalCloseKey);
 }
 
 function closeModal(modal) {

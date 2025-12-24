@@ -4,9 +4,10 @@ const settings = {
   submitButtonSelector: ".modal__submit-btn",
   inactiveButtonClass: "modal__submit-btn_inactive",
   inputErrorClass: "modal__input_state_error",
+  errorClass: "modal__error_visible",
 };
 
-const showInputError = (formElement, inputElement, errorMessage, config) => {
+const showInputError = (formElement, inputElement, errorMessage) => {
   const errorMessageElement = formElement.querySelector(
     `#${inputElement.id}-error`
   );
@@ -14,7 +15,7 @@ const showInputError = (formElement, inputElement, errorMessage, config) => {
   errorMessageElement.textContent = errorMessage;
 };
 
-const hideInputError = (formElement, inputElement, errorMessage, config) => {
+const hideInputError = (formElement, inputElement) => {
   const errorMessageElement = formElement.querySelector(
     `#${inputElement.id}-error`
   );
@@ -36,7 +37,7 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonElement,config) => {
+const toggleButtonState = (inputList, buttonElement) => {
   if (hasInvalidInput(inputList)) {
     disableButton(buttonElement);
   } else {
@@ -44,17 +45,17 @@ const toggleButtonState = (inputList, buttonElement,config) => {
   }
 };
 
-const disableButton = (buttonElement, config) => {
+const disableButton = (buttonElement) => {
   buttonElement.classList.add(settings.inactiveButtonClass);
   buttonElement.disabled = true;
 };
 
-const enableButton = (buttonElement, config) => {
+const enableButton = (buttonElement) => {
   buttonElement.classList.remove(settings.inactiveButtonClass);
   buttonElement.disabled = false;
 };
 
-const resetValidation = (formElement, inputList, config) => {
+const resetValidation = (formElement, inputList) => {
   inputList.forEach((input) => {
     hideInputError(formElement, input);
   });
@@ -71,7 +72,7 @@ const setEventListeners = (formElement, config) => {
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
       checkInputValidity(formElement, inputElement, config);
-      toggleButtonState(inputList, buttonElement, config );
+      toggleButtonState(inputList, buttonElement, config);
     });
   });
 };
